@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class JumpState : PlayerState
 {
-    private const string _triggerJump = "Jump";
-    private const string _horizontal = "Horizontal";
+    private const string Jump = "Jump";
+    private const string Horizontal = "Horizontal";
 
     private Utility _utility;
     private Jump _jump;
@@ -18,7 +18,7 @@ public class JumpState : PlayerState
 
     public override void Enter()
     {
-        _player.Animator.SetTrigger(_triggerJump);
+        _player.Animator.SetTrigger(Jump);
         _jump.DoJump(_player.JumpForce);
     }
 
@@ -28,7 +28,7 @@ public class JumpState : PlayerState
 
         if (_utility.IsGrounded())
         {
-            if (Input.GetAxisRaw(_horizontal) != 0)
+            if (Input.GetAxisRaw(Horizontal) != 0)
             {
                 _player.ChangeState(_player.WalkState);
             }

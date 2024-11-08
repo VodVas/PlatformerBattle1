@@ -2,12 +2,7 @@ using UnityEngine;
 
 public class DetectCircle : MonoBehaviour
 {
-    private EnemyAI _enemyAI;
-
-    private void Awake()
-    {
-        _enemyAI = GetComponentInParent<EnemyAI>();
-    }
+    [SerializeField] private EnemyAI _enemyAI;
 
     private void OnTriggerEnter2D(Collider2D other)
     {

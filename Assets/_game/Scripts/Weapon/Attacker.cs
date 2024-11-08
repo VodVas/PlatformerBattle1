@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Attacker : MonoBehaviour
 {
-    private const string _isFight = "IsFight";
+    private const string IsFight = "IsFight";
 
     private Animator _animator;
 
@@ -21,6 +21,6 @@ public class Attacker : MonoBehaviour
 
     private void StartAttack()
     {
-        _animator.SetBool(_isFight, true);
+        _animator.SetBool(IsFight, true);
     }
 }

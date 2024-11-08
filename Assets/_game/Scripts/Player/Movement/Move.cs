@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    private const string _horizontal = "Horizontal";
+    private const string Horizontal = "Horizontal";
 
     private Rigidbody2D _rigidbody;
 
@@ -13,7 +13,7 @@ public class Move : MonoBehaviour
 
     public void DoMove(float speed)
     {
-        float moveX = Input.GetAxisRaw(_horizontal);
+        float moveX = Input.GetAxisRaw(Horizontal);
 
         Vector2 move = new Vector2(moveX * speed, _rigidbody.velocity.y);
 

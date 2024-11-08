@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class RunState : PlayerState
 {
-    private const string _horizontal = "Horizontal";
-    private const string _isRunning = "IsRunning";
-    private const string _jump = "Jump";
-    private const string _run = "Run";
+    private const string Horizontal = "Horizontal";
+    private const string IsRunning = "IsRunning";
+    private const string Jump = "Jump";
+    private const string Run = "Run";
 
     private Move _move;
 
@@ -16,22 +16,22 @@ public class RunState : PlayerState
 
     public override void Enter()
     {
-        _player.Animator.SetBool(_isRunning, true);
+        _player.Animator.SetBool(IsRunning, true);
     }
 
     public override void Update()
     {
         _move.DoMove(_player.RunSpeed);
 
-        if (Input.GetAxisRaw(_horizontal) == 0)
+        if (Input.GetAxisRaw(Horizontal) == 0)
         {
             _player.ChangeState(_player.IdleState);
         }
-        else if (Input.GetButtonDown(_jump))
+        else if (Input.GetButtonDown(Jump))
         {
             _player.ChangeState(_player.JumpState);
         }
-        else if (!Input.GetButton(_run))
+        else if (!Input.GetButton(Run))
         {
             _player.ChangeState(_player.WalkState);
         }
@@ -39,6 +39,6 @@ public class RunState : PlayerState
 
     public override void Exit()
     {
-        _player.Animator.SetBool(_isRunning, false);
+        _player.Animator.SetBool(IsRunning, false);
     }
 }

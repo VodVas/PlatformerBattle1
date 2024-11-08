@@ -60,14 +60,19 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.49f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\_game\Scripts\DieHealLogic\Health.cs" />
     <Compile Include="Assets\_game\Scripts\Player\Movement\PlayerStateMachine.cs" />
     <Compile Include="Assets\_game\Scripts\Enemy\EnemyAI.cs" />
+    <Compile Include="Assets\_game\Scripts\CollectibleItem\Coin\CoinSpawner.cs" />
+    <Compile Include="Assets\_game\Scripts\CollectibleItem\CollectibleItem.cs" />
     <Compile Include="Assets\_game\Scripts\Player\Movement\Move.cs" />
     <Compile Include="Assets\_game\Scripts\DieHealLogic\DieHandler.cs" />
-    <Compile Include="Assets\_game\Scripts\DieHealLogic\HealthHandler.cs" />
     <Compile Include="Assets\_game\Scripts\Weapon\Attacker.cs" />
+    <Compile Include="Assets\_game\Scripts\CollectibleItem\Coin\Coin.cs" />
     <Compile Include="Assets\_game\Scripts\DieHealLogic\DamageHandler.cs" />
+    <Compile Include="Assets\_game\Scripts\CollectibleItem\AidKit\AidKit.cs" />
     <Compile Include="Assets\_game\Scripts\Player\Movement\Jump.cs" />
+    <Compile Include="Assets\_game\Scripts\Player\ItemCollector.cs" />
     <Compile Include="Assets\_game\Scripts\Player\Movement\WalkState.cs" />
     <Compile Include="Assets\_game\Scripts\Player\Movement\PlayerState.cs" />
     <Compile Include="Assets\_game\Scripts\Enemy\DamageReceiver.cs" />
@@ -77,14 +82,10 @@
     <Compile Include="Assets\_game\Scripts\Utility\Utility.cs" />
     <Compile Include="Assets\_game\Scripts\Enemy\MoveBetweenPoints.cs" />
     <Compile Include="Assets\_game\Scripts\Enemy\HuntCircle.cs" />
-    <Compile Include="Assets\_game\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\_game\Scripts\Player\Player.cs" />
     <Compile Include="Assets\_game\Scripts\Player\Movement\IdleState.cs" />
-    <Compile Include="Assets\_game\Scripts\Coin\CoinSpawner.cs" />
     <Compile Include="Assets\_game\Scripts\Player\Movement\JumpState.cs" />
-    <Compile Include="Assets\_game\Scripts\Coin\Coin.cs" />
     <Compile Include="Assets\_game\Scripts\Weapon\Weapon.cs" />
-    <Compile Include="Assets\_game\Scripts\AidKit\AidKit.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -2,29 +2,29 @@ using UnityEngine;
 
 public class IdleState : PlayerState
 {
-    private const string _horizontal = "Horizontal";
-    private const string _isIdle = "IsIdle";
-    private const string _jump = "Jump";
-    private const string _run = "Run";
+    private const string Horizontal = "Horizontal";
+    private const string IsIdle = "IsIdle";
+    private const string Jump = "Jump";
+    private const string Run = "Run";
 
     public IdleState(PlayerStateMachine playerController) : base(playerController) { }
 
     public override void Enter()
     {
-        _player.Animator.SetBool(_isIdle, true);
+        _player.Animator.SetBool(IsIdle, true);
     }
 
     public override void Update()
     {
-        if (Input.GetAxisRaw(_horizontal) != 0)
+        if (Input.GetAxisRaw(Horizontal) != 0)
         {
             _player.ChangeState(_player.WalkState);
         }
-        else if (Input.GetButtonDown(_jump))
+        else if (Input.GetButtonDown(Jump))
         {
             _player.ChangeState(_player.JumpState);
         }
-        else if (Input.GetButton(_run))
+        else if (Input.GetButton(Run))
         {
             _player.ChangeState(_player.RunState);
         }
@@ -32,6 +32,6 @@ public class IdleState : PlayerState
 
     public override void Exit()
     {
-        _player.Animator.SetBool(_isIdle, false);
+        _player.Animator.SetBool(IsIdle, false);
     }
 }

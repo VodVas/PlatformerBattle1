@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(MoveBetweenPoints))]
 public class EnemyAI : MonoBehaviour
 {
     [SerializeField] private float _chaseSpeed = 4f;
